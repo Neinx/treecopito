@@ -1,0 +1,29 @@
+<h1>Updates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <h5>Welcome to Treebook!</h5>
+    <% @statuses.each do |status| %>
+      <tr>
+      <input type="checkbox" class="G_check" id="G_check_5251">
+        <td><%= status.name %></td>
+        <td><%= status.content %></td>
+        <td><%= link_to 'Show', status %></td>
+        <td><%= link_to 'Edit', edit_status_path(status) %></td>
+        <td><%= link_to 'Delete', status, method: :delete, data: { confirm: 'Are you sure nigga?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Status', new_status_path %>
