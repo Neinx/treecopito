@@ -2,8 +2,9 @@
 <h1>All Statuses</h1>
 
 <%= link_to "New post", new_status_path, class: "btn btn-success" %>
-
-
+<%= link_to "Sign In", '/users/sign_in' %>
+<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+<%= link_to "Register", new_user_registration_path %>
 </div>
 <% @statuses.each do |status| %>
 <div class="status">
